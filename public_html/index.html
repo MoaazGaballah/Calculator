@@ -9,127 +9,149 @@ and open the template in the editor.
         <title>This Is My JavaScript Website</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            .mov{
-                background-color: #0000FF;
-                font-size: 30px;
-                color: #FF7777;
-            }
-            .out{
-                background-color: #FF0000;
-                font-size: 12px;
-                color: #2222FF;
-            }
-        </style>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <button id="target">Welcome</button>
-        <button id="block"></button>
-        
+        <script src="funcs.js">
+        </script>
+        <div class="calculatorBorder">
+            <label class="led">led</label>
+            <div class="btns">
+                <button class="numbtn" id="7">7</button>
+                <button class="numbtn" id="8">8</button>
+                <button class="numbtn" id="9">9</button>
+                <br/>
+                <button class="numbtn" id="4">4</button>
+                <button class="numbtn" id="5">5</button>
+                <button class="numbtn" id="6">6</button>
+                <br/>
+                <button class="numbtn" id="1">1</button>
+                <button class="numbtn" id="2">2</button>
+                <button class="numbtn" id="3">3</button>
+                
+                <button id="plusSympol">+</button>
+                <button id="minusSympol">-</button>
+                <br/>
+                <button id="0">0</button>
+                <button id=",">,</button>
+                <button id="equlaSympol">=</button>
+            </div>
+
+        </div>
+
         <script type="text/javascript">
+
+
             /*var node = document.getElementById('target');
-            var bNode = document.getElementById('block');
-            
-            bNode.style.visibility = 'hidden';
-            var s = false;
-            
-            function clk (e){
-                if(s == false)
-                {
-                    bNode.style.visibility = 'visible';
-                    bNode.style.width = '250px';
-                }
-                
-                h = bNode.style.height;
-                
-                var the_i = setInterval(function (){
-                   if(s == false)
-                   {
-                       h = h + 10;
-                       bNode.style.height = h + 'px';
-                   }
-                   else
-                   {
-                       h = h - 10;
-                       bNode.style.height = h + 'px';
-                   }
-                   
-                   if(s == false && (bNode.clientHeight <= 200 ))
-                   {
-                       clearInterval(the_i);
-                       s = true; 
-                   }
-                   else if(s == true && (bNode.clientHeight >= 2 ))
-                   {
-                       clearInterval(the_i);
-                       s = false;
-                       bNode.style.visibility = 'hidden';
-                   }
-                },100);
-            }
-            
-            node.onclick = clk;*/
+             var l = 0;
+             var the_i = setInterval(function (){
+             node.style.position = 'relative';
+             node.style.left = l + 'px';
+             l = l + 5;
+             },100);*/
             /*var node = document.getElementById('target');
-            h = node.clientHeight;
-            alert(h);
-            the_i = setInterval(function (){
-                h = h+2;
-                node.style.height = h + "px";
-            },100);*/
+             var bNode = document.getElementById('block');
+             
+             bNode.style.visibility = 'hidden';
+             var s = false;
+             
+             function clk (e){
+             if(s == false)
+             {
+             bNode.style.visibility = 'visible';
+             bNode.style.width = '250px';
+             }
+             
+             h = bNode.style.height;
+             
+             var the_i = setInterval(function (){
+             if(s == false)
+             {
+             h = h + 10;
+             bNode.style.height = h + 'px';
+             }
+             else
+             {
+             h = h - 10;
+             bNode.style.height = h + 'px';
+             }
+             
+             if(s == false && (bNode.clientHeight >= 200 ))
+             {
+             clearInterval(the_i);
+             s = true; 
+             }
+             else if(s == true && (bNode.clientHeight <= 2 ))
+             {
+             clearInterval(the_i);
+             s = false;
+             bNode.style.visibility = 'hidden';
+             }
+             },100);
+             }
+             
+             node.onclick = clk;*/
+            /*var node = document.getElementById('target');
+             h = node.clientHeight;
+             alert(h);
+             the_i = setInterval(function (){
+             h = h+2;
+             node.style.height = h + "px";
+             },100);*/
             /*var node = document.getElementById('val');
-            var x = false;
-            n = setInterval(function (){
-               if(x == false)
-                   node.style.color = "#FF0000";
-               else
-                   node.style.color = "0000FF";
-               x = !x;
-            },1000);*/
+             var x = false;
+             n = setInterval(function (){
+             if(x == false)
+             node.style.color = "#FF0000";
+             else
+             node.style.color = "0000FF";
+             x = !x;
+             },1000);*/
             /*i = 1;
-            time_v = setInterval(function (){
-                alert("timeIntervalSet");
-                if(i >= 4){
-                    clearInterval(time_v);  
-                    alert("timeCleared");
-                }
-                i++;
-            },3000);*/
+             time_v = setInterval(function (){
+             alert("timeIntervalSet");
+             if(i >= 4){
+             clearInterval(time_v);  
+             alert("timeCleared");
+             }
+             i++;
+             },3000);*/
             /*time = setTimeout(function (){
-                alert("timeOutSet");
-                clearTimeout(time);   
-                alert("timeOutCleared");
-            },3000);*/
-            
-            
+             alert("timeOutSet");
+             clearTimeout(time);   
+             alert("timeOutCleared");
+             },3000);*/
+
+
             //var bNode = document.getElementById("val");
             //var uNode = bNode.nextSibling;
             //var iNode = bNode.nextSibling.nextSibling;
             //var node = document.getElementById('val');
             //var uNode = node.childNodes[2];
             //alert(uNode.innerHTML);
-            
+
             /*
-            if(bNode.nodeType == 1){
-                alert("bNode is TAG");
-                alert(bNode.innerHTML);
-            }
-            else if(bNode.nodeType == 3){
-                alert("bNode is Text");
-            }
-            if(uNode.nodeType == 1){
-                alert("uNode is TAG");
-                alert(uNode.innerHTML);
-            }
-            else if(uNode.nodeType == 3){
-                alert("uNode is Text");
-            }    
-            if(iNode.nodeType == 1){
-                alert("iNode is TAG");
-                alert(iNode.innerHTML);
-            }
-            else if(iNode.nodeType == 3){
-                alert("iNode is Text");
-            }*/
+             if(bNode.nodeType == 1){
+             alert("bNode is TAG");
+             alert(bNode.innerHTML);
+             }
+             else if(bNode.nodeType == 3){
+             alert("bNode is Text");
+             }
+             if(uNode.nodeType == 1){
+             alert("uNode is TAG");
+             alert(uNode.innerHTML);
+             }
+             else if(uNode.nodeType == 3){
+             alert("uNode is Text");
+             }    
+             if(iNode.nodeType == 1){
+             alert("iNode is TAG");
+             alert(iNode.innerHTML);
+             }
+             else if(iNode.nodeType == 3){
+             alert("iNode is Text");
+             }*/
             //alert(bNode.innerHTML);
             //alert(uNode.innerHTML);
             //alert(iNode.innerHTML);

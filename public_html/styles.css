@@ -1,0 +1,39 @@
+body {
+  background-color: powderblue;
+}
+.calculatorBorder{
+    border-style: solid;
+    position: relative;
+    left: 450px;
+    top: 150px;
+    width: 400px;
+    height: 350px;
+}
+
+.led{
+    border-style: outset;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    width: 375px;
+    height: 50px;
+}
+
+.btns{
+    position: relative;
+    top: 70px;
+    left: 10px;
+    height: 250px;
+}
+
+.numbtn{
+    width: 75px;
+    height: 50px;
+}
+
+#plusSympol{
+    position: relative;
+    top: 25px;
+    width: 75px;
+    height: 100px;
+}
