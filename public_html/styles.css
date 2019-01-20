@@ -1,39 +1,107 @@
-body {
-  background-color: powderblue;
+body{
+    background-image: url(math.jpg);;
 }
+
+/*This is for the calculatorBorder div*/
 .calculatorBorder{
-    border-style: solid;
+    background-color: blueviolet;
+    border-style: ridge;
     position: relative;
     left: 450px;
     top: 150px;
-    width: 400px;
+    width: 390px;
     height: 350px;
 }
-
+/*This is for led div*/
 .led{
+    text-align: right;
     border-style: outset;
     position: relative;
-    left: 10px;
-    top: 10px;
-    width: 375px;
+    left:7px;
+    top: 8px;
+    width: 370px;
     height: 50px;
 }
 
-.btns{
+#lbl{
+    margin-right: 20px;
+    font-size: 40px;
+}
+/*This is for whole calculatorButtons div*/
+.calculatorButtons{
+    /*border-style: solid;*/
     position: relative;
-    top: 70px;
-    left: 10px;
-    height: 250px;
+    left: 7px;
+    top: 20px;
+    width: 380px;
+    height: 260px;
+}
+/*This is just for 1-9 numberButtons div*/
+.numberButtons{
+    /*border-style: solid;*/
+    position: relative;
+    left: 5px;
+    top: 5px;
+    width: 280px;
+    height: 180px;
 }
 
 .numbtn{
-    width: 75px;
-    height: 50px;
+    width: 84px;
+    height: 55px;
+    font-size: 30px;
+    margin: 3px;
+}
+
+.sympolButtons{
+    /*border-style: solid;*/
+    position: absolute;
+    left: 300px;
+    top: 5px;
+    width: 65px;
+    height: 245px;
+}
+#minusSympol{
+    width: 70px;
+    height: 55px;
+    font-size: 30px;
+    margin-top:  3px;
 }
 
 #plusSympol{
-    position: relative;
-    top: 25px;
-    width: 75px;
-    height: 100px;
+    width: 70px;
+    height: 115px;
+    font-size: 30px;
+    margin-top: 7px;
 }
+
+#equlaSympol{
+    width: 70px;
+    height: 55px;
+    font-size: 30px;
+    margin-top:  7px;
+}
+
+.zeroAndCommaButtons{
+    /*border-style: solid;*/
+    position: absolute;
+    left: 5px;
+    top: 195px;
+    width: 280px;
+    height: 55px;
+}
+
+#zero{
+    width: 178px;
+    height: 55px;
+    font-size: 30px;
+    margin-left: 3px;
+}
+
+#comma{
+    width: 84px;
+    height: 55px;
+    font-size: 30px;
+    margin-left: 6px;
+}
+

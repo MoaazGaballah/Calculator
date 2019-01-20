@@ -15,26 +15,32 @@ and open the template in the editor.
         <script src="funcs.js">
         </script>
         <div class="calculatorBorder">
-            <label class="led">led</label>
-            <div class="btns">
-                <button class="numbtn" id="7">7</button>
-                <button class="numbtn" id="8">8</button>
-                <button class="numbtn" id="9">9</button>
-                <br/>
-                <button class="numbtn" id="4">4</button>
-                <button class="numbtn" id="5">5</button>
-                <button class="numbtn" id="6">6</button>
-                <br/>
-                <button class="numbtn" id="1">1</button>
-                <button class="numbtn" id="2">2</button>
-                <button class="numbtn" id="3">3</button>
-                
-                <button id="plusSympol">+</button>
-                <button id="minusSympol">-</button>
-                <br/>
-                <button id="0">0</button>
-                <button id=",">,</button>
-                <button id="equlaSympol">=</button>
+            <div class="led">
+                <label id="lbl">0</label>
+            </div>
+            <div class="calculatorButtons">
+                <div class="numberButtons">
+                    <button class="numbtn" >7</button>
+                    <button class="numbtn" >8</button>
+                    <button class="numbtn" >9</button>
+                    <br/>
+                    <button class="numbtn" >4</button>
+                    <button class="numbtn" >5</button>
+                    <button class="numbtn" >6</button>
+                    <br/>
+                    <button class="numbtn" >1</button>
+                    <button class="numbtn" >2</button>
+                    <button class="numbtn" >3</button>
+                </div>
+                <div class="sympolButtons">
+                    <button id="minusSympol">-</button>
+                    <button id="plusSympol">+</button>
+                    <button id="equlaSympol">=</button>
+                </div>
+                <div class="zeroAndCommaButtons">
+                    <button id="zero">0</button>
+                    <button id="comma">,</button>
+                </div>
             </div>
 
         </div>
