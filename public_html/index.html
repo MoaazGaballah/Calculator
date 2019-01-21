@@ -12,25 +12,23 @@ and open the template in the editor.
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <script src="funcs.js">
-        </script>
         <div class="calculatorBorder">
             <div class="led">
-                <label id="lbl">0</label>
+                <label class="lab" id="lbl"></label>
             </div>
             <div class="calculatorButtons">
                 <div class="numberButtons">
-                    <button class="numbtn" >7</button>
-                    <button class="numbtn" >8</button>
-                    <button class="numbtn" >9</button>
+                    <button class="numbtn" id="7" >7</button>
+                    <button class="numbtn" id="8">8</button>
+                    <button class="numbtn" id="9">9</button>
                     <br/>
-                    <button class="numbtn" >4</button>
-                    <button class="numbtn" >5</button>
-                    <button class="numbtn" >6</button>
+                    <button class="numbtn" id="4">4</button>
+                    <button class="numbtn" id="5">5</button>
+                    <button class="numbtn" id="6">6</button>
                     <br/>
-                    <button class="numbtn" >1</button>
-                    <button class="numbtn" >2</button>
-                    <button class="numbtn" >3</button>
+                    <button class="numbtn" id="1">1</button>
+                    <button class="numbtn" id="2">2</button>
+                    <button class="numbtn" id="3">3</button>
                 </div>
                 <div class="sympolButtons">
                     <button id="minusSympol">-</button>
@@ -44,7 +42,7 @@ and open the template in the editor.
             </div>
 
         </div>
-
+        <!--
         <script type="text/javascript">
 
 
@@ -161,7 +159,8 @@ and open the template in the editor.
             //alert(bNode.innerHTML);
             //alert(uNode.innerHTML);
             //alert(iNode.innerHTML);
-        </script>
+       </script> -->
+    <script src="funcs.js"></script>
     </body>
 
 </html>
