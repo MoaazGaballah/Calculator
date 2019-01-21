@@ -56,6 +56,7 @@ equal.onclick = eq();
         
 function eq(){
     return function e(){
+        // clearing label first
         alert(label.innerHTML);
     };
 }
