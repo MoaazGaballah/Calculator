@@ -4,7 +4,7 @@ body{
 
 /*This is for the calculatorBorder div*/
 .calculatorBorder{
-    background-color: blueviolet;
+    background-color: #00ff9a;
     border-style: ridge;
     position: relative;
     left: 450px;
