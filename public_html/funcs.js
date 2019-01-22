@@ -49,14 +49,27 @@ plus.onclick = writeToLabel('+');
 
 // writing zero and comma to the label
 zero.onclick = writeToLabel(0);
-comma.onclick = writeToLabel(',');
+comma.onclick = writeToLabel('.');
 
-// writing result spcial case (function) ==> calculating 
-equal.onclick = eq();
-        
+// calculating and writing result function        
 function eq(){
     return function e(){
-        // clearing label first
-        alert(label.innerHTML);
-    };
+        // first and socend number 
+        var firstNumber , socendNumber;
+        var ledText = label.textContent.toString();
+        for (i = 0; i < ledText.length ; i++){
+            if ((ledText[i] === '+') || (ledText[i] === '-') ) {
+                firstNumber = ledText.substring(0,i);
+                socendNumber = ledText.substring(i+1,ledText.length);
+                break;
+            }
+        }
+        if (ledText[i] === '+')
+            label.innerHTML = parseFloat(firstNumber) + parseFloat(socendNumber);
+        else
+            label.innerHTML = parseFloat(firstNumber) - parseFloat(socendNumber);
+    };   
 }
+
+// calling calculating function on pressing equal
+equal.onclick = eq();
