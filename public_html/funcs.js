@@ -24,8 +24,8 @@ var zero = document.getElementById('zero');
 var comma = document.getElementById('comma');
 
 // writing to label function
-function writeToLabel(num){
-    return function (){
+function writeToLabel(num) {
+    return function () {
         label.innerHTML += num;
     };
 }
@@ -52,23 +52,39 @@ zero.onclick = writeToLabel(0);
 comma.onclick = writeToLabel('.');
 
 // calculating and writing result function        
-function eq(){
-    return function e(){
+function eq() {
+    return function e() {
         // first and socend number 
-        var firstNumber , socendNumber;
+        var firstNumber, socendNumber;
         var ledText = label.textContent.toString();
-        for (i = 0; i < ledText.length ; i++){
-            if ((ledText[i] === '+') || (ledText[i] === '-') ) {
-                firstNumber = ledText.substring(0,i);
-                socendNumber = ledText.substring(i+1,ledText.length);
+        for (i = 0; i < ledText.length; i++) {
+            if ((ledText[i] === '+') || (ledText[i] === '-')) {
+                firstNumber = ledText.substring(0, i);
+                socendNumber = ledText.substring(i + 1, ledText.length);
                 break;
             }
         }
-        if (ledText[i] === '+')
-            label.innerHTML = parseFloat(firstNumber) + parseFloat(socendNumber);
-        else
-            label.innerHTML = parseFloat(firstNumber) - parseFloat(socendNumber);
-    };   
+        if (ledText[i] === '+') {
+            if (isNaN(parseFloat(firstNumber) + parseFloat(socendNumber))){
+                label.style.color = '#FF0000';
+                label.style.fontSize = '26px';
+                label.innerHTML = 'Please enter a correct expression';
+            }
+                
+            else
+                label.innerHTML = parseFloat(firstNumber) + parseFloat(socendNumber);
+        } else {
+            if (isNaN(parseFloat(firstNumber) - parseFloat(socendNumber))){
+                label.style.color = '#FF0000';
+                label.style.fontSize = '26px';
+                label.innerHTML = 'Please enter a correct expression';
+            }
+                
+            else
+                label.innerHTML = parseFloat(firstNumber) - parseFloat(socendNumber);
+        }
+
+    };
 }
 
 // calling calculating function on pressing equal
