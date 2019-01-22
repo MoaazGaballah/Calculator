@@ -21,7 +21,7 @@ var equal = document.getElementById('equlaSympol');
 
 // getting zero and comma variables 
 var zero = document.getElementById('zero');
-var comma = document.getElementById('comma');
+var point = document.getElementById('point');
 
 // writing to label function
 function writeToLabel(num) {
@@ -47,9 +47,9 @@ num3.onclick = writeToLabel(3);
 minus.onclick = writeToLabel('-');
 plus.onclick = writeToLabel('+');
 
-// writing zero and comma to the label
+// writing zero and point to the label
 zero.onclick = writeToLabel(0);
-comma.onclick = writeToLabel('.');
+point.onclick = writeToLabel('.');
 
 // calculating and writing result function        
 function eq() {
