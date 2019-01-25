@@ -83,9 +83,16 @@ function eq() {
             else
                 label.innerHTML = parseFloat(firstNumber) - parseFloat(socendNumber);
         }
-
     };
 }
 
 // calling calculating function on pressing equal
 equal.onclick = eq();
+
+
+// this method for tests 
+const calc = document.querySelector('.calculatorBorder');
+calc.addEventListener('mousedown',(e)=>{
+    
+});
+
