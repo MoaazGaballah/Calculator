@@ -90,6 +90,17 @@ function eq() {
 equal.onclick = eq();
 
 
+// Make the div element draggable
+dragElement(document.getElementById('wholeCalculator'));
+
+function dragElement(){
+    var startupMouseX = 0, startupMouseY = 0, currentMouseX = 0, currentMouseY = 0;
+    if (document.getElementById('wholeCalculator')){
+        
+    }
+    
+}
+
 // this method for tests 
 const calc = document.querySelector('.calculatorBorder');
 calc.addEventListener('mousedown',(e)=>{
