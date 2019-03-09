@@ -93,12 +93,42 @@ equal.onclick = eq();
 // Make the div element draggable
 dragElement(document.getElementById('wholeCalculator'));
 
-function dragElement(){
+function dragElement(elmnt){
     var startupMouseX = 0, startupMouseY = 0, currentMouseX = 0, currentMouseY = 0;
     if (document.getElementById('wholeCalculator')){
-        
+        document.getElementById('wholeCalculator').onmousedown = dragMouseDown;
+    } else {
+        elmnt.onmousedown = dragMouseDown;
     }
-    
+}
+function dragMouseDown(e){
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor at startup :
+    startupMouseX = e.clientX;
+    startupMouseY = e.clientY;
+    doucument.onmouseup = closeDragElement;
+    // call the function where ever the cursor move
+    document.onmousemove = elementDrag;
+}
+
+function elementDrag(e){
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position 
+    currentMouseX = startupMouseX - e.clientX;
+    currentMouseY = startupMouseY - e.clientY;
+    startupMouseX = e.clientX;
+    startupMouseY = e.clientY;
+    // set the element new position 
+    elmnt.style.top = (elmnt.offsetTop - currentMouseX)+"px";
+    elmnt.style.left = (elmnt.offsetLeft - currentMouseY)+"px";
+}
+
+function closeDragElement (){
+    // stop moving when mouse button is realesed 
+    document.onmouseup = null;
+    document.onmousemove = null;
 }
 
 // this method for tests 
